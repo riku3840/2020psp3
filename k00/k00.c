@@ -1,11 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 int main(void)
 {
 int *p; // int型を指すポインタ
-int a = 100;
-printf("a=%d\n", a);
-p = &a;
-*p = 10;
-printf("a=%d, *p=%d\n", a, *p);
-printf("address of a = %x, value of p = %x\n", &a, p);
+int i;
+p = (int*)malloc(sizeof(int) * 5);
+if (p == NULL) {
+// アロケートに失敗
+} else {
+for (i=0; i<5; i++) {
+p[i] = i + 1;
+}
+for (i=0; i<5; i++) {
+printf("%d\n", p[i]);
+}
+free(p);
+}
 }
