@@ -65,8 +65,7 @@ typedef struct {
 
 70~77 posに0をいれ、一つずつ増加させて最初から一つずつ確認する
 
-72~75 途中でもkeyとarrayCity[post].idが一致した場合はbreakで
-　　　　離脱する
+72~75 途中でもkeyとarrayCity[post].idが一致した場合はbreakで離脱する
 
 85 resultに-1を代入する
 
@@ -74,11 +73,9 @@ typedef struct {
 
 88 postにleftとrightの真ん中の値を代入する
 
-89 keyがpostに対応するidより大きければleftにpost+1を代入し、
-　　小さければrightにpost-1を代入する
+89 keyがpostに対応するidより大きければleftにpost+1を代入し,小さければrightにpost-1を代入する
 
-97~100 途中でもkeyとarrayCity[post].idが一致した場合はbreakで
-　　　　離脱する
+97~100 途中でもkeyとarrayCity[post].idが一致した場合はbreakでで離脱する
 
 
 ## 出力結果
