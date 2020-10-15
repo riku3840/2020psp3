@@ -86,13 +86,13 @@ int BinarySearch(int key, City arrayCity[], int left, int right)
   while(right>=left)
   {
   post=left+(right-left)/2;
-  if (key>post)
+  if (key>arrayCity[post].id)
   {
-      left=post;
+      left=post+1;
   }
   else
   {
-      right=post;    
+      right=post-1;    
   }
   if(key==arrayCity[post].id)
   {
