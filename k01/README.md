@@ -62,14 +62,21 @@ typedef struct {
 
 ## ソースコードの説明
 68 resultに-1を代入する
+
 70~77 posに0をいれ、一つずつ増加させて最初から一つずつ確認する
+
 72~75 途中でもkeyとarrayCity[post].idが一致した場合はbreakで
 　　　　離脱する
+
 85 resultに-1を代入する
+
 86 rightがleftと等しくなるまで探索を続ける
+
 88 postにleftとrightの真ん中の値を代入する
+
 89 keyがpostに対応するidより大きければleftにpost+1を代入し、
 　　小さければrightにpost-1を代入する
+
 97~100 途中でもkeyとarrayCity[post].idが一致した場合はbreakで
 　　　　離脱する
 
