@@ -76,7 +76,7 @@ int LinearSearch(int key, City arrayCity[], int size)
      }
  }
 
-
+ return result;
 }
 
 int BinarySearch(int key, City arrayCity[], int left, int right)
@@ -100,6 +100,7 @@ int BinarySearch(int key, City arrayCity[], int left, int right)
    break;
   }
   }
+  return result; 
 }
 
 
