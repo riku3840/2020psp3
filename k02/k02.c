@@ -112,6 +112,7 @@ if(pList->city.id==ID)
   *pCity=pList->city;
   break; 
 }
+ pList=pList->pNext;
 }
 return(i);
 }
