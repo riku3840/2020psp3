@@ -103,15 +103,15 @@ int SearchCityByID(Node* pList, int ID, City* pCity)
 {
 int i=-1;
 int j=-1;
-while (i<MAX_CITY-1) 
+while (j<MAX_CITY-1) 
 {
-j++;
-if(pList->city.id==ID)
-{
-  i=j;  
-  *pCity=pList->city;
-  break; 
-}
+ j++;
+ if(pList->city.id==ID)
+ {
+   i=j;  
+   *pCity=pList->city;
+   break; 
+ }
  pList=pList->pNext;
 }
 return(i);
