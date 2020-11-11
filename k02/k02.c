@@ -101,19 +101,18 @@ int SearchCityByName(Node* pList, char* cityName, City* pCity)
 
 int SearchCityByID(Node* pList, int ID, City* pCity)
 {
-Node*pNode = pList;
 int i=-1;
 int j=-1;
 while (i<MAX_CITY-1) 
 {
 j++;
-if(pNode->city.id==ID)
+if(pList->city.id==ID)
 {
   i=j;  
+  *pCity=pList->city;
   break; 
 }
 }
-*pCity=pNode->city;
 return(i);
 }
 
