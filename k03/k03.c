@@ -32,9 +32,37 @@ char* ForceSearch(char text[], char key[])
 
 char* BMSearch(char text[], char key[])
 {
-    //  ここを実装する
+  int text_len=0;
+  for(int pos=0;text[pos]!='\0';pos++)
+  {
+      text_len++;
+  }
+  int key_len=0;
+  for(int pos=0;key[pos]!='\0';pos++)
+  {
+      key_len++;
+  }
+   int pos=0;
+   int start =0;
+   while(text[pos+start]!='\0')
+    {
+     if(text[pos+start]==key[pos])
+        {
+            pos++;
+            if(key[pos]=='\0')
+            {
+                return(&text[start]);
+                break;
+            }
+        }
+            else
+            {
+                start++;
+                pos=0; 
+            }
+    }
+}   
 
-}
 
 int main(void)
 {
