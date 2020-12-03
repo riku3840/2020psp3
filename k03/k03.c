@@ -19,6 +19,7 @@ char* ForceSearch(char text[], char key[])
       if(key[pos]=='\0')
       {
         return(&text[start]);
+        break;
       }
      }
      else
