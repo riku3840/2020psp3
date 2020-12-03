@@ -9,8 +9,24 @@ char StrKey[] = "wind";
 
 char* ForceSearch(char text[], char key[])
 {
-    //  ここを実装する
-
+    int pos=0;
+    int start =0;
+    while(text[pos+start]!='\0')
+    {
+     if(text[pos+start]==key[pos])
+     {
+      pos++;
+      if(key[pos]=='\0')
+      {
+        return(&text[start]);
+      }
+     }
+     else
+     {
+      start++;
+      pos=0; 
+     }
+     }
 }
 
 char* BMSearch(char text[], char key[])
