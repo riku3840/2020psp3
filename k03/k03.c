@@ -42,26 +42,44 @@ char* BMSearch(char text[], char key[])
   {
       key_len++;
   }
-   int pos=0;
-   int start =0;
-   while(text[pos+start]!='\0')
-    {
-     if(text[pos+start]==key[pos])
+  int i,table[256],pos,shift,a,b=0;
+  for(i=0;i<=255;i++)
+  {
+      table[i]=key_len;
+  }
+  for(i=0;key[i]!='\0';i++)
+  {
+      table[key[i]]=key_len-i-1;
+  }
+  for(i=key_len;i<=text_len;i=pos+shift)
+  {
+     for(pos=i;pos>=pos-key_len;pos--)
+     {
+        a=key_len-b;
+        if(text[pos]==key[a])
         {
-            pos++;
-            if(key[pos]=='\0')
+            b++;
+            if (b==key_len)
             {
-                return(&text[start]);
-                break;
+              return &text[i-key_len];
             }
-        }
             else
             {
-                start++;
-                pos=0; 
+             b=0;
+             shift =table[text[pos]];
+             if(pos + shift<=i)
+             {
+                 shift = i+1-pos;
+             }
+             break;
             }
-    }
-}   
+            
+        }
+
+     }
+  }
+}
+
 
 
 int main(void)
