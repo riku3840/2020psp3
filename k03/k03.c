@@ -49,7 +49,7 @@ char* BMSearch(char text[], char key[])
   }
   for(i=0;key[i]!='\0';i++)
   {
-      table[key[i]]=key_len-i-1;
+      table[(unsigned char)key[i]]=key_len-i-1;
   }
   for(i=key_len;i<=text_len;i=pos+shift)
   {
@@ -61,12 +61,12 @@ char* BMSearch(char text[], char key[])
             b++;
             if (b==key_len)
             {
-              return &text[i-key_len];
+              return &text[i-key_len+1];
             }
             else
             {
              b=0;
-             shift =table[text[pos]];
+             shift =table[text[(unsigned char)pos]];
              if(pos + shift<=i)
              {
                  shift = i+1-pos;
