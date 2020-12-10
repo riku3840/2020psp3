@@ -51,11 +51,11 @@ char* BMSearch(char text[], char key[])
   {
       table[(unsigned char)key[i]]=key_len-i-1;
   }
-  for(i=key_len;i<=text_len;i=pos+shift)
+  for(i=key_len-1;i<=text_len;i=pos+shift)
   {
-     for(pos=i;pos>=pos-key_len;pos--)
+     for(pos=i;pos!=0;pos--)
      {
-        a=key_len-b;
+        a=key_len-b-1;
         if(text[pos]==key[a])
         {
             b++;
