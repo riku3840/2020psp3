@@ -55,6 +55,9 @@
 ## 出力結果
 
 ```
+$ ./k03
+Force Search. Find keyword at:wind in my hair.
+BM Search. Find keyword at:wind in my hair.
 
 ```
 
