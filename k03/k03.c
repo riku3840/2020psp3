@@ -47,6 +47,7 @@ char* BMSearch(char text[], char key[])
   {
       table[i]=key_len;
   }
+  printf("k_len=%d,T_len=%d",key_len,text_len);
   for(i=0;key[i]!='\0';i++)
   {
       table[(unsigned char)key[i]]=key_len-i-1;
