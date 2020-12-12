@@ -26,8 +26,12 @@ char* ForceSearch(char text[], char key[])
      {
       start++;
       pos=0; 
+      if (text[pos+start]=='\0')
+      {
+        return NULL;
+      }
+      
      }
-     return(NULL);
      }
 }
 
@@ -74,9 +78,13 @@ char* BMSearch(char text[], char key[])
               shift = i+1-pos;
            } 
              break;
+            
         }
     }
-    return(NULL);
+    if(i>text_len)
+    {
+      return NULL;
+    }
   }
 }
 
