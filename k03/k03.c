@@ -27,6 +27,7 @@ char* ForceSearch(char text[], char key[])
       start++;
       pos=0; 
      }
+     return(NULL);
      }
 }
 
@@ -75,6 +76,7 @@ char* BMSearch(char text[], char key[])
              break;
         }
     }
+    return(NULL);
   }
 }
 
