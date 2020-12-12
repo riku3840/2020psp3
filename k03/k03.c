@@ -27,6 +27,10 @@ char* ForceSearch(char text[], char key[])
       start++;
       pos=0; 
      }
+     if(text[pos+start]='\0')
+     {
+       return(NULL);
+     }
      }
 }
 
@@ -51,7 +55,7 @@ char* BMSearch(char text[], char key[])
   {
       table[(unsigned char)key[i]]=key_len-i-1;
   }
-  for(i=key_len-1;i<=text_len;i=pos+shift)
+  for(i=key_len-1;i<text_len;i=pos+shift)
   {
      for(pos=i;a!=0;pos--)
      {
@@ -74,6 +78,10 @@ char* BMSearch(char text[], char key[])
            } 
              break;
         }
+    }
+    if(i=text_len)
+    {
+      return(NULL);
     }
   }
 }
