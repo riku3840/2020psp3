@@ -63,4 +63,4 @@ BM Search. Find keyword at:wind in my hair.
 
 ## 修正履歴
 54 条件文　i<=text_len　を　i<text_len　に変更
-31,86 keyが見つからなかったときにNULLを出力
+31,85 keyが見つからなかったときにNULLを出力
