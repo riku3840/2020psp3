@@ -81,11 +81,8 @@ char* BMSearch(char text[], char key[])
             
         }
     }
-    if(i>text_len)
-    {
-      return NULL;
-    }
   }
+  return NULL;
 }
 
 
