@@ -86,29 +86,52 @@ void BubbleSort(City arrayCity[], int size)
       cnt=0;
         for(pos=0;pos<size-1;pos++)
         {
-        if(array[pos]>array[pos+1])
+        if(total[pos]>total[pos+1])
         {
-            a=array[pos];
-            array[pos]=array[pos+1];
-            array[pos+1]=a;
+            a=total[pos];
+            total[pos]=total[pos+1];
+            total[pos+1]=a;
             cnt++;
-        } 
-        else
-        {
-            {
-                break;
-            }
-        }
-        
         }   
     }
-
 }
 
 
 void QuickSort(City arrayCity[], int left, int right)
 {
-    //  ここを実装する
+ int i;
+ int j;
+ int a;
+    if(sizeof(seafood)>1)
+    {
+     i=left;
+     j=right;
+     pivot=seafood[left];
+     while (1)
+     {
+         while(seafood[i]<=pivot)
+         {
+          i++;
+         }
+         while(seafood[i]>=pivot)
+         {
+          j--;
+         }
+         if(i>=j)
+         {}
+         else
+         {
+            a=seafood[i];
+            seafood[i]=seafood[j];
+            seafood[j]=a; 
+         }
+    }
+    }
+    a=pivot;
+    pivot=seafood[j];
+    seafood[j]=a;
+    QuickSort(City arrayCity[],int left,j-1)
+    QuickSort(City arrayCity[],j+1,int right)
 
 }
 
