@@ -119,4 +119,6 @@ typedef struct {
 ```
 
 ## 修正履歴
-
+total[]->arrayCity[].total
+seafood[]->arrayCity[].seafood
+sizeof(seafood)->i+j
