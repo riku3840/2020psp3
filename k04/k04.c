@@ -80,7 +80,7 @@ void BubbleSort(City arrayCity[], int size)
 {
     int cnt=1;
     int pos;
-    int a[0];
+    City a;
     while(cnt!=0)
     {
       cnt=0;
@@ -88,9 +88,9 @@ void BubbleSort(City arrayCity[], int size)
         {
         if(arrayCity[pos].total>arrayCity[pos+1].total)
         {
-            a[0]=arrayCity[pos];
+            a=arrayCity[pos];
             arrayCity[pos]=arrayCity[pos+1];
-            arrayCity[pos+1]=a[0];
+            arrayCity[pos+1]=a;
             cnt++;
         }   
     }
@@ -99,7 +99,7 @@ void QuickSort(City arrayCity[], int left, int right)
 {
  int i;
  int j;
- int a[0];
+ City a;
     if(right-left>1)
     {
      i=left;
@@ -107,11 +107,11 @@ void QuickSort(City arrayCity[], int left, int right)
      pivot=arrayCity[left].seafood;
      while (1)
      {
-         while(arrayCity[i].seafood<=pivot)
+         while(arrayCity[i].seafood<=pivot && i<=right)
          {
           i++;
          }
-         while(arrayCity[j].seafood>=pivot)
+         while(arrayCity[j].seafood>pivot)
          {
           j--;
          }
@@ -121,18 +121,17 @@ void QuickSort(City arrayCity[], int left, int right)
          }
          else
          {
-            a[0]=arrayCity[i];
+            a=arrayCity[i];
             arrayCity[i]=arrayCity[j];
-            arrayCity[j]=a[0]; 
+            arrayCity[j]=a; 
+         }
+     }
     }
-    }
-    }
-    a=pivot;
-    pivot=arrayCity[j];
+    a=arrayCity[left];
+    arrayity[left]=arrayCity[j];
     arrayCity[j]=a;
     QuickSort(arrayCity,left,j-1);
     QuickSort(arrayCity,j+1,right);
-
 }
 
 
