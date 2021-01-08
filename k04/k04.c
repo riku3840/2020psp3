@@ -102,7 +102,7 @@ void QuickSort(City arrayCity[], int left, int right)
  int pivot;
  int j;
  City a;
-    if(right-left>2)
+    if(right-left>0)
     {
      i=left;
      j=right;
