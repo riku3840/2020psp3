@@ -122,3 +122,9 @@ typedef struct {
 total[]->arrayCity[].total
 seafood[]->arrayCity[].seafood
 sizeof(seafood)->i+j
+QuickSort(City arrayCity,int left,j-1)->QuickSort(arrayCity,left,j-1);
+QuickSort(City arrayCity,j+1,int right)->QuickSort(arrayCity,j+1,right)
+121にbreak
+値をいれかえる動作のときのaをa[0]にしてarrayCity[].totalなどとしていたところを
+arrayCity[]のみにする
+if(i+j>1)をif(right-left>1)にする

@@ -80,7 +80,7 @@ void BubbleSort(City arrayCity[], int size)
 {
     int cnt=1;
     int pos;
-    int a;
+    int a[0];
     while(cnt!=0)
     {
       cnt=0;
@@ -88,9 +88,9 @@ void BubbleSort(City arrayCity[], int size)
         {
         if(arrayCity[pos].total>arrayCity[pos+1].total)
         {
-            a=arrayCity[pos];
+            a[0]=arrayCity[pos];
             arrayCity[pos]=arrayCity[pos+1];
-            arrayCity[pos+1]=a;
+            arrayCity[pos+1]=a[0];
             cnt++;
         }   
     }
@@ -99,7 +99,7 @@ void QuickSort(City arrayCity[], int left, int right)
 {
  int i;
  int j;
- int a;
+ int a[0];
     if(right-left>1)
     {
      i=left;
@@ -121,9 +121,9 @@ void QuickSort(City arrayCity[], int left, int right)
          }
          else
          {
-            a=arrayCity[i];
+            a[0]=arrayCity[i];
             arrayCity[i]=arrayCity[j];
-            arrayCity[j]=a; 
+            arrayCity[j]=a[0]; 
     }
     }
     }
