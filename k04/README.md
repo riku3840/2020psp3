@@ -1,5 +1,5 @@
 # 課題4 レポート
-学生番号　氏名
+bb35319047　宮嶋理久
 
 ## 課題
 本課題では、全国の県庁所在地の消費データを読み込み、ソートするプログラムを作成する。
@@ -246,3 +246,8 @@ arrayCity[i].seafood<=pivot に　&& (i<=right)　を加える
 105 right-left>1をright-left+1>0とする
 
 117 j>=leftの条件を付け足す
+
+if(i=j)->if(i==j)
+
+  while(arrayCity[i].seafood>pivot && i<=right)->while(arrayCity[i].seafood>=pivot && i<=right)
+
