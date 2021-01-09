@@ -118,7 +118,7 @@ void QuickSort(City arrayCity[], int left, int right)
          {
           j--;
          }
-         if(i==j)
+         if(i>=j)
          {
             break;
          }
