@@ -110,7 +110,7 @@ void QuickSort(City arrayCity[], int left, int right)
      pivot=arrayCity[left].seafood;
      while (1)
      {
-         while(arrayCity[i].seafood>=pivot && i<=right)
+         while(arrayCity[i].seafood<=pivot && i<=right)
          {
           i++;
          }
