@@ -1,5 +1,5 @@
 # 課題5 レポート
-学生番号　氏名
+bb35319047　宮嶋理久
 
 
 ## 課題
@@ -97,13 +97,39 @@ int AdjacencyMatrix[MAX_STATIONS][MAX_STATIONS] = {
 - 幅優先探索のルート表示(10点)
 
 ## ソースコードの説明
+111~114 visited[]を初期化
 
+115 Stackを初期化
 
+116 Stackにstartの値をいれる
+
+117 Stackが空になるまで続ける
+
+119 valにStackの一番うえの値を入れる
+
+120~128 visited[val]が0である場合、1に変え、valの場所からいれる場所をstackにいれる
+
+132~137 printfでvisitedを確認
+
+208~211 visited[]を初期化
+
+212 Queueを初期化
+
+213 Queueにstartの値をいれる
+
+214 Queueが空になるまで続ける
+
+216 valにQueueの一番端の最も古い値を入れる
+
+217~225 visited[val]が0である場合、1に変え、valの場所からいれる場所をQueueにいれる
+
+229~234 printfでvisitedを確認
 
 ## 出力結果
 
 ```
-
+Stack:visited={1,1,1,1,1,1,1,1,}
+Queue:visited={1,1,1,1,1,1,1,1,}Time Required: 7
 ```
 
 ## 修正履歴
