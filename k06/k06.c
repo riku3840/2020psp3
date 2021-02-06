@@ -70,10 +70,29 @@ void DynamicProgLimited(Menu arrayItem[], int items, int nap_size)
 {
     int nap_value[items+1][nap_size + 1];   //  動的計画法で作成するテーブル
     int history[items+1][nap_size + 1];     //  履歴を保存するテーブル(選択したメニューを探すときに使用)
-
-    //　ここを実装する
-
-
+     //　ここを実装する
+     int i,j;
+    for(i=0;i<items;i++)
+    {
+        for(j=0;j<nap_size;j++)
+        {
+            nap_value[i][j]=0;
+        }
+    }
+    for(i;i<=items;i++)
+    {
+        for(int k;k<arrayItem[i-1].price;k++)
+        {
+          nap_value[i][j]=nap_value[i-1][j];
+        }
+        for(j=1;j<=nap_size;j++)
+        {
+         if(nap_value[i-1][j]<nap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorie)
+         {
+           nap_value[i][j]=nap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorie;
+         }
+        }
+    }
 }
 
 
