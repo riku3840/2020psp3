@@ -85,4 +85,8 @@ typedef struct tagMenu{
 ```
 
 ## 修正履歴
+iとkの初期値を0にする
 
+forの条件をi<=items+1とj<=nap_size+1に変更
+
+最大値をMAXからnap_value[items+1][nap_size + 1]に変更
