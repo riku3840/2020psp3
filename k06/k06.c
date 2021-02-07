@@ -83,7 +83,7 @@ void DynamicProgLimited(Menu arrayItem[], int items, int nap_size)
     {
         for(int k=0;k<arrayItem[i-1].price;k++)
         {
-          nap_value[i][j]=nap_value[i-1][j];
+          nap_value[i][k]=nap_value[i-1][k];
         }
         for(j=1;j<=nap_size;j++)
         {
@@ -93,7 +93,7 @@ void DynamicProgLimited(Menu arrayItem[], int items, int nap_size)
          }
         }
     }
-    printf("最大カロリーは%dです",nap_value[1000][135]);
+    printf("最大カロリーは%dです", nap_value[items][nap_size]);
 }
 
 
