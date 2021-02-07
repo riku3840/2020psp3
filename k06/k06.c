@@ -82,15 +82,15 @@ void DynamicProgLimited(Menu arrayItem[], int items, int nap_size)
     }
     for(i;i<=items;i++)
     {
-        for(int k;k<arrayItem[i-1].price;k++)
+        for(int k;k<arrayItem[i-1].calorie;k++)
         {
           nap_value[i][j]=nap_value[i-1][j];
         }
         for(j=1;j<=nap_size;j++)
         {
-         if(nap_value[i-1][j]<nap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorie)
+         if(nap_value[i-1][j]<nap_value[i-1][j-arrayItem[i-1].calorie]+arrayItem[i-1].calorie)
          {
-           nap_value[i][j]=nap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorie;
+           nap_value[i][j]=nap_value[i-1][j-arrayItem[i-1].calorie]+arrayItem[i-1].calorie;
          }
         }
     }
