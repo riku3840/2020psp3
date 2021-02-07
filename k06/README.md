@@ -90,3 +90,11 @@ iとkの初期値を0にする
 forの条件をi<=items+1とj<=nap_size+1に変更
 
 最大値をMAXからnap_value[items+1][nap_size + 1]に変更
+
+86 nap_value[i][j]=nap_value[i-1][j]をnap_value[i][k]=nap_value[i-1][k]に変更
+
+82~88 forの条件文をi<=items とj<=nap_sizeに変更
+
+printfの出力をnap_value[items][nap_size]に変更
+
+90 ifの条件文をnap_value[i][j]<nap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorieに変更
