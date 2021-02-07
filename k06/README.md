@@ -70,7 +70,7 @@ typedef struct tagMenu{
 
 85~88 商品の重さを超えないまでとりあえずnap_valueに一つ上の値をいれる
 
-91~94 元々入っている値とnap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorieで得られる値を比べ大きい方をnap_valueとする
+91~96 元々入っている値とnap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorieで得られる値を比べ大きい方をnap_valueとする
 
 97~107　最大カロリーを探し、出力する
 
