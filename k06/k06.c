@@ -93,7 +93,7 @@ void DynamicProgLimited(Menu arrayItem[], int items, int nap_size)
          }
         }
     }
-    printf("最大カロリーは%dです",nap_value[items][nap_size]);
+    printf("最大カロリーは%dです",nap_value[1000][135]);
 }
 
 
