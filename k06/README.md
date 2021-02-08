@@ -1,5 +1,5 @@
 # 課題6 レポート
-学生番号　氏名
+bb35319047　宮嶋理久
 
 
 ## 課題
@@ -66,14 +66,35 @@ typedef struct tagMenu{
 
 
 ## ソースコードの説明
+76~81 nap_valueを初期化
+
+85~88 商品の重さを超えないまでとりあえずnap_valueに一つ上の値をいれる
+
+91~96 元々入っている値とnap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorieで得られる値を比べ大きい方をnap_valueとする
+
+97~107　最大カロリーを探し、出力する
+
 
 
 
 ## 出力結果
 
 ```
+最大カロリーは1993819744です
 
 ```
 
 ## 修正履歴
+iとkの初期値を0にする
 
+forの条件をi<=items+1とj<=nap_size+1に変更
+
+最大値をMAXからnap_value[items+1][nap_size + 1]に変更
+
+86 nap_value[i][j]=nap_value[i-1][j]をnap_value[i][k]=nap_value[i-1][k]に変更
+
+82~88 forの条件文をi<=items とj<=nap_sizeに変更
+
+printfの出力をnap_value[items][nap_size]に変更
+
+90 ifの条件文をnap_value[i][j]<nap_value[i-1][j-arrayItem[i-1].price]+arrayItem[i-1].calorieに変更
